@@ -1,9 +1,9 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs",
-        "pages/mine/mine",
-        "pages/hot/hot"
+        "pages/recommend/index",
+        "pages/mine/index",
+        "pages/hot/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -11,25 +11,34 @@
         "navigationBarTitleText": "Weixin",
         "navigationBarTextStyle": "black"
     },
-    "style": "v2",
+
     "sitemapLocation": "sitemap.json",
     "tabBar": {
-        "list": [
-            {
+        "color": "#707070",
+        "selectedColor": "#d81e06",
+        "list": [{
                 "pagePath": "pages/index/index",
-                "text": "首页"
+                "text": "首页",
+                "iconPath": "imgs/icon/index.png",
+                "selectedIconPath": "imgs/icon/index_select.png"
             },
             {
-                "pagePath": "pages/logs/logs",
-                "text": "日志"
+                "pagePath": "pages/recommend/index",
+                "text": "推荐",
+                "iconPath": "imgs/icon/recommend.png",
+                "selectedIconPath": "imgs/icon/recommend_select.png"
             },
             {
-                "pagePath": "pages/hot/hot",
-                "text": "hot"
+                "pagePath": "pages/hot/index",
+                "text": "热门",
+                "iconPath": "imgs/icon/hot.png",
+                "selectedIconPath": "imgs/icon/hot_select.png"
             },
             {
-                "pagePath": "pages/mine/mine",
-                "text": "我的"
+                "pagePath": "pages/mine/index",
+                "text": "我的",
+                "iconPath": "imgs/icon/mine.png",
+                "selectedIconPath": "imgs/icon/mine_select.png"
             }
         ]
     },
@@ -37,5 +46,9 @@
         "request": 10000,
         "downloadFile": 10000
     },
-    "debug": true
+    "debug": true,
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "van-image": "@vant/weapp/image/index"
+    }
 }
